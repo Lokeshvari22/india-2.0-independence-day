@@ -1,0 +1,160 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Freedom Timeline | India 2.0</title>
+
+    <link
+        rel="stylesheet"
+        href="{% static 'history/css/history.css' %}"
+    >
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <a href="/" class="logo">
+            🇮🇳 INDIA 2.0
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="{% url 'history:timeline' %}">
+                Timeline
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="history-hero">
+
+        <p class="eyebrow">
+            INDIA'S JOURNEY
+        </p>
+
+        <h1>
+            Freedom Timeline
+        </h1>
+
+        <p>
+            Explore the important events that shaped
+            India's journey towards independence.
+        </p>
+
+    </section>
+
+
+    <!-- TIMELINE -->
+
+    <section class="timeline-section">
+
+        <div class="timeline">
+
+            {% for event in events %}
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+                        {{ event.year }}
+                    </div>
+
+                    <div class="timeline-line"></div>
+
+                    <div class="event-card">
+
+                        {% if event.image_url %}
+
+                            <img
+                                src="{{ event.image_url }}"
+                                alt="{{ event.title }}"
+                            >
+
+                        {% endif %}
+
+                        <div class="event-content">
+
+                            <span class="event-location">
+                                📍 {{ event.location }}
+                            </span>
+
+                            <h2>
+                                {{ event.title }}
+                            </h2>
+
+                            <p>
+                                {{ event.description|truncatewords:30 }}
+                            </p>
+
+                            <a
+                                href="{% url 'history:event_detail' event.id %}"
+                                class="read-button"
+                            >
+                                Explore Event →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            {% empty %}
+
+                <div class="empty-state">
+
+                    <h2>
+                        No historical events yet.
+                    </h2>
+
+                    <p>
+                        Add events through Django Admin.
+                    </p>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <span>
+            🇮🇳 India 2.0
+        </span>
+
+        <span>
+            Built with Django
+        </span>
+
+    </footer>
+
+</body>
+
+</html>

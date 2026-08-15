@@ -1,0 +1,718 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        India 2.0 | Independence Day 2026
+    </title>
+
+    <link
+    rel="stylesheet"
+    href="{% static 'core/css/style.css' %}?v=2"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <a href="/" class="logo">
+        🇮🇳 INDIA <span>2.0</span>
+    </a>
+
+
+    <div class="nav-links">
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="{% url 'history:timeline' %}">
+            Timeline
+        </a>
+
+        <a href="{% url 'fighters:fighter_list' %}">
+            Freedom Fighters
+        </a>
+
+        <a href="{% url 'quiz:quiz' %}">
+            Quiz
+        </a>
+
+    </div>
+
+
+    <a
+        href="{% url 'quiz:quiz' %}"
+        class="nav-button"
+    >
+        Take the Quiz →
+    </a>
+
+</nav>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            🇮🇳 INDEPENDENCE DAY 2026
+        </p>
+
+
+        <h1>
+            INDIA
+            <span>2.0</span>
+        </h1>
+
+
+        <h2>
+            Freedom is not just history.
+            <br>
+            <strong>It is our responsibility.</strong>
+        </h2>
+
+
+        <p class="description">
+
+            Explore the people, movements and
+            moments that transformed India from
+            a struggle for freedom into a nation
+            of possibilities.
+
+        </p>
+
+
+        <div class="buttons">
+
+            <a
+                href="#explore"
+                class="primary-button"
+            >
+                Explore India
+            </a>
+
+
+            <a
+                href="{% url 'history:timeline' %}"
+                class="secondary-button"
+            >
+                Start the Journey →
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FLAG -->
+
+    <div class="flag">
+
+        <div class="stripe orange"></div>
+
+        <div class="stripe white">
+
+            <div class="chakra">
+                ☸
+            </div>
+
+        </div>
+
+        <div class="stripe green"></div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= QUICK STATS ================= -->
+
+<section class="stats">
+
+    <div class="stat">
+
+        <strong>
+            1857
+        </strong>
+
+        <span>
+            First major uprising
+        </span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>
+            1930
+        </strong>
+
+        <span>
+            Salt March
+        </span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>
+            1942
+        </strong>
+
+        <span>
+            Quit India Movement
+        </span>
+
+    </div>
+
+
+    <div class="stat highlight">
+
+        <strong>
+            1947
+        </strong>
+
+        <span>
+            India became independent
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EXPLORE ================= -->
+
+<section
+    class="explore"
+    id="explore"
+>
+
+
+    <p class="section-label">
+        YOUR INTERACTIVE JOURNEY
+    </p>
+
+
+    <h2>
+        Discover India's Story
+    </h2>
+
+
+    <p class="section-description">
+
+        Don't just read history.
+        <strong>Experience it.</strong>
+
+    </p>
+
+
+
+    <div class="cards">
+
+
+        <!-- TIMELINE -->
+
+        <a
+            href="{% url 'history:timeline' %}"
+            class="card"
+        >
+
+            <div class="card-icon">
+                🕰️
+            </div>
+
+
+            <span class="card-number">
+                01
+            </span>
+
+
+            <h3>
+                Freedom Timeline
+            </h3>
+
+
+            <p>
+
+                Travel through the defining
+                moments that shaped India's
+                freedom movement.
+
+            </p>
+
+
+            <span class="card-link">
+                Explore Timeline →
+            </span>
+
+        </a>
+
+
+
+        <!-- FIGHTERS -->
+
+        <a
+            href="{% url 'fighters:fighter_list' %}"
+            class="card"
+        >
+
+            <div class="card-icon">
+                🧑‍🚀
+            </div>
+
+
+            <span class="card-number">
+                02
+            </span>
+
+
+            <h3>
+                Freedom Fighters
+            </h3>
+
+
+            <p>
+
+                Meet the brave people who
+                sacrificed their lives and
+                dreams for India's freedom.
+
+            </p>
+
+
+            <span class="card-link">
+                Meet the Heroes →
+            </span>
+
+        </a>
+
+
+
+        <!-- QUIZ -->
+
+        <a
+            href="{% url 'quiz:quiz' %}"
+            class="card featured-card"
+        >
+
+            <div class="card-icon">
+                🧠
+            </div>
+
+
+            <span class="card-number">
+                03
+            </span>
+
+
+            <h3>
+                Independence Quiz
+            </h3>
+
+
+            <p>
+
+                Challenge yourself with
+                historical questions and
+                discover how much you know.
+
+            </p>
+
+
+            <span class="card-link">
+                Test Yourself →
+            </span>
+
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= DID YOU KNOW ================= -->
+
+<section class="fact-section">
+
+
+    <div class="fact-content">
+
+
+        <p class="section-label">
+            DID YOU KNOW?
+        </p>
+
+
+        <h2>
+            One date changed
+            <span>an entire nation.</span>
+        </h2>
+
+
+        <p>
+
+            On 15 August 1947, India awakened
+            to freedom after nearly two centuries
+            of British rule.
+
+        </p>
+
+
+        <div class="fact-box">
+
+            <span>
+                15
+            </span>
+
+            <div>
+
+                <strong>
+                    AUGUST
+                </strong>
+
+                <small>
+                    1947
+                </small>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="quote-card">
+
+        <div class="quote-mark">
+            “
+        </div>
+
+
+        <p>
+
+            At the stroke of the midnight hour,
+            when the world sleeps, India will
+            awake to life and freedom.
+
+        </p>
+
+
+        <span>
+            — Jawaharlal Nehru
+        </span>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= JOURNEY ================= -->
+
+<section class="journey">
+
+
+    <p class="section-label">
+        A JOURNEY THROUGH HISTORY
+    </p>
+
+
+    <h2>
+        From Struggle to Freedom
+    </h2>
+
+
+    <p class="section-description">
+
+        Four moments.
+        <strong>One incredible journey.</strong>
+
+    </p>
+
+
+
+    <div class="timeline">
+
+
+        <a
+            href="{% url 'history:timeline' %}"
+            class="timeline-item"
+        >
+
+            <span>
+                1857
+            </span>
+
+            <h3>
+                First War of Independence
+            </h3>
+
+            <p>
+                The uprising that shook
+                British rule.
+            </p>
+
+        </a>
+
+
+
+        <div class="timeline-line"></div>
+
+
+
+        <a
+            href="{% url 'history:timeline' %}"
+            class="timeline-item"
+        >
+
+            <span>
+                1930
+            </span>
+
+            <h3>
+                Salt March
+            </h3>
+
+            <p>
+                A peaceful protest that
+                challenged an empire.
+            </p>
+
+        </a>
+
+
+
+        <div class="timeline-line"></div>
+
+
+
+        <a
+            href="{% url 'history:timeline' %}"
+            class="timeline-item"
+        >
+
+            <span>
+                1942
+            </span>
+
+            <h3>
+                Quit India
+            </h3>
+
+            <p>
+                A powerful call for
+                British withdrawal.
+            </p>
+
+        </a>
+
+
+
+        <div class="timeline-line"></div>
+
+
+
+        <a
+            href="{% url 'history:timeline' %}"
+            class="timeline-item freedom"
+        >
+
+            <span>
+                1947
+            </span>
+
+            <h3>
+                🇮🇳 Independence
+            </h3>
+
+            <p>
+                India finally became free.
+            </p>
+
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= CHALLENGE ================= -->
+
+<section class="challenge">
+
+
+    <div>
+
+        <p class="section-label">
+            YOUR NEXT CHALLENGE
+        </p>
+
+
+        <h2>
+            How well do you know
+            India's freedom story?
+        </h2>
+
+
+        <p>
+
+            Take the Independence Quiz,
+            test your knowledge and discover
+            your score.
+
+        </p>
+
+
+        <a
+            href="{% url 'quiz:quiz' %}"
+            class="primary-button"
+        >
+            Start Quiz 🚀
+        </a>
+
+    </div>
+
+
+    <div class="challenge-icon">
+        🧠
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= FINAL CTA ================= -->
+
+<section class="final-cta">
+
+
+    <p class="small-title">
+        THIS INDEPENDENCE DAY
+    </p>
+
+
+    <h2>
+        Remember the past.
+        <br>
+        <span>Build the future.</span>
+    </h2>
+
+
+    <p>
+
+        Freedom was earned by generations
+        before us. What will we do with it?
+
+    </p>
+
+
+    <a
+        href="{% url 'history:timeline' %}"
+        class="primary-button"
+    >
+        Begin Your Journey 🇮🇳
+    </a>
+
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+
+    <div>
+
+        <strong>
+            🇮🇳 INDIA 2.0
+        </strong>
+
+        <p>
+            A digital journey through
+            India's freedom story.
+        </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="{% url 'history:timeline' %}">
+            Timeline
+        </a>
+
+        <a href="{% url 'fighters:fighter_list' %}">
+            Fighters
+        </a>
+
+        <a href="{% url 'quiz:quiz' %}">
+            Quiz
+        </a>
+
+    </div>
+
+
+    <div>
+
+        <p>
+            Built with Django ❤️
+        </p>
+
+        <p>
+            Independence Day 2026
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+
+</body>
+
+</html>

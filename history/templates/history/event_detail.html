@@ -1,0 +1,116 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        {{ event.title }} | India 2.0
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{% static 'history/css/history.css' %}"
+    >
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <a href="/" class="logo">
+            🇮🇳 INDIA 2.0
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="{% url 'history:timeline' %}">
+                Timeline
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- EVENT DETAIL -->
+
+    <main class="detail-container">
+
+        <a
+            href="{% url 'history:timeline' %}"
+            class="back-button"
+        >
+            ← Back to Timeline
+        </a>
+
+
+        <article class="detail-card">
+
+            <div class="detail-year">
+                {{ event.year }}
+            </div>
+
+
+            {% if event.image_url %}
+
+                <img
+                    src="{{ event.image_url }}"
+                    alt="{{ event.title }}"
+                    class="detail-image"
+                >
+
+            {% endif %}
+
+
+            <div class="detail-content">
+
+                <span class="event-location">
+                    📍 {{ event.location }}
+                </span>
+
+                <h1>
+                    {{ event.title }}
+                </h1>
+
+                <p>
+                    {{ event.description }}
+                </p>
+
+            </div>
+
+        </article>
+
+    </main>
+
+
+    <footer>
+
+        <span>
+            🇮🇳 India 2.0
+        </span>
+
+        <span>
+            Built with Django
+        </span>
+
+    </footer>
+
+</body>
+
+</html>

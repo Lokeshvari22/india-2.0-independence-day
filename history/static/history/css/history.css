@@ -1,0 +1,506 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    color: #222;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background: white;
+
+    border-bottom: 1px solid #eee;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.logo {
+    text-decoration: none;
+
+    color: #222;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.nav-links {
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #444;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #ff9933;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.history-hero {
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff5e9,
+            white,
+            #effff2
+        );
+}
+
+
+.eyebrow {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+    color: #138808;
+}
+
+
+.history-hero h1 {
+    font-size: 60px;
+
+    margin-bottom: 20px;
+}
+
+
+.history-hero p:last-child {
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+    color: #666;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline-section {
+    padding: 90px 8%;
+}
+
+
+.timeline {
+    max-width: 950px;
+
+    margin: auto;
+}
+
+
+.timeline-item {
+    position: relative;
+
+    padding-left: 100px;
+
+    margin-bottom: 50px;
+}
+
+
+.timeline-dot {
+    position: absolute;
+
+    left: 0;
+
+    top: 20px;
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ff9933;
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(255, 153, 51, 0.3);
+
+    z-index: 2;
+}
+
+
+.timeline-item:nth-child(even) .timeline-dot {
+    background: #138808;
+}
+
+
+.timeline-line {
+    position: absolute;
+
+    left: 34px;
+
+    top: 85px;
+
+    width: 3px;
+
+    height: calc(100% + 15px);
+
+    background:
+        linear-gradient(
+            #ff9933,
+            #138808
+        );
+}
+
+
+.timeline-item:last-child .timeline-line {
+    display: none;
+}
+
+
+/* =========================
+   EVENT CARD
+========================= */
+
+.event-card {
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    border: 1px solid #eee;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.05);
+
+    transition: 0.3s;
+}
+
+
+.event-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 40px
+        rgba(0, 0, 0, 0.1);
+}
+
+
+.event-card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+}
+
+
+.event-content {
+    padding: 30px;
+}
+
+
+.event-location {
+    color: #138808;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+.event-content h2 {
+    font-size: 28px;
+
+    margin: 12px 0;
+}
+
+
+.event-content p {
+    line-height: 1.7;
+
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+
+.read-button {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border-radius: 25px;
+
+    background: #ff9933;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.read-button:hover {
+    background: #138808;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+    text-align: center;
+
+    padding: 80px;
+
+    background: white;
+
+    border-radius: 20px;
+}
+
+
+.empty-state h2 {
+    margin-bottom: 10px;
+}
+
+
+.empty-state p {
+    color: #666;
+}
+
+
+/* =========================
+   DETAIL PAGE
+========================= */
+
+.detail-container {
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 60px 20px;
+}
+
+
+.back-button {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: #138808;
+
+    font-weight: bold;
+
+    margin-bottom: 30px;
+}
+
+
+.detail-card {
+    background: white;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+.detail-year {
+    padding: 25px;
+
+    text-align: center;
+
+    font-size: 35px;
+
+    font-weight: bold;
+
+    background: #ff9933;
+
+    color: white;
+}
+
+
+.detail-image {
+    width: 100%;
+
+    max-height: 450px;
+
+    object-fit: cover;
+}
+
+
+.detail-content {
+    padding: 50px;
+}
+
+
+.detail-content h1 {
+    font-size: 45px;
+
+    margin: 15px 0 25px;
+}
+
+
+.detail-content p {
+    font-size: 18px;
+
+    line-height: 2;
+
+    color: #555;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 30px 8%;
+
+    background: #111;
+
+    color: white;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+
+    .nav-links {
+        gap: 12px;
+    }
+
+
+    .history-hero h1 {
+        font-size: 42px;
+    }
+
+
+    .timeline-section {
+        padding: 60px 5%;
+    }
+
+
+    .timeline-item {
+        padding-left: 0;
+
+        padding-top: 90px;
+    }
+
+
+    .timeline-dot {
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+
+
+    .timeline-line {
+        display: none;
+    }
+
+
+    .detail-content {
+        padding: 30px;
+    }
+
+
+    .detail-content h1 {
+        font-size: 32px;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+
+}

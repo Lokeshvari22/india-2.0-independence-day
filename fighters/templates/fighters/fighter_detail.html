@@ -1,0 +1,174 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        {{ fighter.name }} | India 2.0
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{% static 'fighters/css/fighters.css' %}"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <a href="/" class="logo">
+            🇮🇳 INDIA 2.0
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="{% url 'history:timeline' %}">
+                Timeline
+            </a>
+
+            <a href="{% url 'fighters:fighter_list' %}">
+                Fighters
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- DETAIL -->
+
+    <main class="detail-container">
+
+        <a
+            href="{% url 'fighters:fighter_list' %}"
+            class="back-button"
+        >
+            ← Back to Freedom Fighters
+        </a>
+
+
+        <article class="detail-card">
+
+            <div class="detail-top">
+
+                <div class="detail-image">
+
+                    {% if fighter.image_url %}
+
+                        <img
+                            src="{{ fighter.image_url }}"
+                            alt="{{ fighter.name }}"
+                        >
+
+                    {% else %}
+
+                        <div class="detail-placeholder">
+                            🇮🇳
+                        </div>
+
+                    {% endif %}
+
+                </div>
+
+
+                <div class="detail-heading">
+
+                    <p class="eyebrow">
+                        FREEDOM FIGHTER
+                    </p>
+
+                    <h1>
+                        {{ fighter.name }}
+                    </h1>
+
+                    <p class="detail-years">
+
+                        {{ fighter.birth_year }}
+
+                        {% if fighter.death_year %}
+                            — {{ fighter.death_year }}
+                        {% endif %}
+
+                    </p>
+
+                    <p>
+                        {{ fighter.short_description }}
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-body">
+
+                <h2>
+                    Biography
+                </h2>
+
+                <p>
+                    {{ fighter.biography }}
+                </p>
+
+
+                <h2>
+                    Contribution to India's Freedom
+                </h2>
+
+                <p>
+                    {{ fighter.contribution }}
+                </p>
+
+            </div>
+
+
+            <div class="detail-actions">
+
+                <a
+                    href="{% url 'fighters:random_fighter' %}"
+                    class="surprise-button"
+                >
+                    🎲 Discover Someone Else
+                </a>
+
+            </div>
+
+        </article>
+
+    </main>
+
+
+    <footer>
+
+        <span>
+            🇮🇳 India 2.0
+        </span>
+
+        <span>
+            Built with Django
+        </span>
+
+    </footer>
+
+
+</body>
+
+</html>

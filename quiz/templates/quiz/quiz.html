@@ -1,0 +1,240 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Independence Quiz | India 2.0
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{% static 'quiz/css/quiz.css' %}"
+    >
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+    <a href="/" class="logo">
+        🇮🇳 INDIA 2.0
+    </a>
+
+    <div class="nav-links">
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="{% url 'history:timeline' %}">
+            Timeline
+        </a>
+
+        <a href="{% url 'fighters:fighter_list' %}">
+            Fighters
+        </a>
+
+        <a href="{% url 'quiz:quiz' %}">
+            Quiz
+        </a>
+
+    </div>
+
+</nav>
+
+
+<header class="quiz-header">
+
+    <p class="eyebrow">
+        TEST YOUR KNOWLEDGE
+    </p>
+
+    <h1>
+        🇮🇳 Independence Quiz
+    </h1>
+
+    <p>
+        How much do you know about India's
+        journey to independence?
+    </p>
+
+</header>
+
+
+<main class="quiz-container">
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+
+        {% for question in questions %}
+
+        <section class="question-card">
+
+            <div class="question-number">
+
+                QUESTION {{ forloop.counter }}
+
+            </div>
+
+
+            <h2>
+
+                {{ question.question }}
+
+            </h2>
+
+
+            <div class="options">
+
+
+                <label class="option">
+
+                    <input
+                        type="radio"
+                        name="question_{{ question.id }}"
+                        value="A"
+                        required
+                    >
+
+                    <span>
+
+                        <strong>A</strong>
+
+                        {{ question.option_a }}
+
+                    </span>
+
+                </label>
+
+
+                <label class="option">
+
+                    <input
+                        type="radio"
+                        name="question_{{ question.id }}"
+                        value="B"
+                    >
+
+                    <span>
+
+                        <strong>B</strong>
+
+                        {{ question.option_b }}
+
+                    </span>
+
+                </label>
+
+
+                <label class="option">
+
+                    <input
+                        type="radio"
+                        name="question_{{ question.id }}"
+                        value="C"
+                    >
+
+                    <span>
+
+                        <strong>C</strong>
+
+                        {{ question.option_c }}
+
+                    </span>
+
+                </label>
+
+
+                <label class="option">
+
+                    <input
+                        type="radio"
+                        name="question_{{ question.id }}"
+                        value="D"
+                    >
+
+                    <span>
+
+                        <strong>D</strong>
+
+                        {{ question.option_d }}
+
+                    </span>
+
+                </label>
+
+
+            </div>
+
+        </section>
+
+        {% empty %}
+
+        <div class="empty">
+
+            <h2>
+                No questions available.
+            </h2>
+
+            <p>
+                Add questions through Django Admin.
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+
+        {% if questions %}
+
+        <div class="submit-area">
+
+            <button
+                type="submit"
+                class="submit-button"
+            >
+                Submit Quiz →
+            </button>
+
+        </div>
+
+        {% endif %}
+
+
+    </form>
+
+</main>
+
+
+<footer>
+
+    <span>
+        🇮🇳 India 2.0
+    </span>
+
+    <span>
+        Built with Django
+    </span>
+
+</footer>
+
+
+</body>
+
+</html>

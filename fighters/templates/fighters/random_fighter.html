@@ -1,0 +1,161 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Discover | India 2.0
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{% static 'fighters/css/fighters.css' %}"
+    >
+
+</head>
+
+
+<body>
+
+    <nav class="navbar">
+
+        <a href="/" class="logo">
+            🇮🇳 INDIA 2.0
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="{% url 'fighters:fighter_list' %}">
+                Fighters
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <main class="random-container">
+
+        {% if fighter %}
+
+            <p class="eyebrow">
+                ✨ YOUR DISCOVERY
+            </p>
+
+            <h1>
+                Meet a Freedom Fighter
+            </h1>
+
+
+            <article class="random-card">
+
+                {% if fighter.image_url %}
+
+                    <img
+                        src="{{ fighter.image_url }}"
+                        alt="{{ fighter.name }}"
+                    >
+
+                {% else %}
+
+                    <div class="random-placeholder">
+                        🇮🇳
+                    </div>
+
+                {% endif %}
+
+
+                <div class="random-content">
+
+                    <p class="random-label">
+                        YOU DISCOVERED
+                    </p>
+
+                    <h2>
+                        {{ fighter.name }}
+                    </h2>
+
+                    <p class="detail-years">
+
+                        {{ fighter.birth_year }}
+
+                        {% if fighter.death_year %}
+                            — {{ fighter.death_year }}
+                        {% endif %}
+
+                    </p>
+
+                    <p>
+                        {{ fighter.short_description }}
+                    </p>
+
+                    <div class="random-actions">
+
+                        <a
+                            href="{% url 'fighters:fighter_detail' fighter.id %}"
+                            class="learn-button"
+                        >
+                            Explore Story
+                        </a>
+
+                        <a
+                            href="{% url 'fighters:random_fighter' %}"
+                            class="outline-button"
+                        >
+                            🎲 Again
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        {% else %}
+
+            <div class="empty-state">
+
+                <h2>
+                    No fighters available.
+                </h2>
+
+                <p>
+                    Add freedom fighters through Django Admin.
+                </p>
+
+            </div>
+
+        {% endif %}
+
+    </main>
+
+
+    <footer>
+
+        <span>
+            🇮🇳 India 2.0
+        </span>
+
+        <span>
+            Built with Django
+        </span>
+
+    </footer>
+
+
+</body>
+
+</html>

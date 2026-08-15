@@ -1,0 +1,253 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Quiz Result | India 2.0
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{% static 'quiz/css/quiz.css' %}"
+    >
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+    <a href="/" class="logo">
+        🇮🇳 INDIA 2.0
+    </a>
+
+    <div class="nav-links">
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="{% url 'quiz:quiz' %}">
+            Quiz
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main class="result-container">
+
+
+    <p class="eyebrow">
+        QUIZ COMPLETE
+    </p>
+
+
+    <h1>
+        Your Independence Score
+    </h1>
+
+
+    <div class="score-card">
+
+       <div
+            class="score-circle"
+            data-percentage="{{ percentage }}"
+        >
+
+            <span>
+                {{ percentage }}%
+            </span>
+
+       </div>
+
+        <h2>
+
+            {{ score }}
+            /
+            {{ total }}
+
+        </h2>
+
+
+        {% if percentage == 100 %}
+
+            <p class="result-message">
+                🏆 Perfect Score! You are a
+                true history champion.
+            </p>
+
+        {% elif percentage >= 70 %}
+
+            <p class="result-message">
+                🇮🇳 Excellent! You know your
+                independence history well.
+            </p>
+
+        {% elif percentage >= 40 %}
+
+            <p class="result-message">
+                👍 Good attempt! Keep exploring
+                India's history.
+            </p>
+
+        {% else %}
+
+            <p class="result-message">
+                📚 Keep learning! There is much
+                more to discover.
+            </p>
+
+        {% endif %}
+
+
+        <div class="result-buttons">
+
+            <a
+                href="{% url 'quiz:restart' %}"
+                class="submit-button"
+            >
+                🔄 Try Again
+            </a>
+
+            <a
+                href="{% url 'fighters:fighter_list' %}"
+                class="outline-button"
+            >
+                Meet Freedom Fighters
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <section class="answers">
+
+        <h2>
+            Review Your Answers
+        </h2>
+
+
+        {% for item in results %}
+
+        <article
+            class="answer-card
+            {% if item.correct %}
+                correct
+            {% else %}
+                wrong
+            {% endif %}"
+        >
+
+            <span class="answer-status">
+
+                {% if item.correct %}
+                    ✓ Correct
+                {% else %}
+                    ✗ Incorrect
+                {% endif %}
+
+            </span>
+
+
+            <h3>
+
+                {{ forloop.counter }}.
+                {{ item.question.question }}
+
+            </h3>
+
+
+            {% if item.correct %}
+
+                <p>
+                    Your answer was correct.
+                </p>
+
+            {% else %}
+
+                <p>
+
+                    Correct answer:
+
+                    {% if item.question.correct_answer == "A" %}
+                        {{ item.question.option_a }}
+                    {% elif item.question.correct_answer == "B" %}
+                        {{ item.question.option_b }}
+                    {% elif item.question.correct_answer == "C" %}
+                        {{ item.question.option_c }}
+                    {% else %}
+                        {{ item.question.option_d }}
+                    {% endif %}
+
+                </p>
+
+            {% endif %}
+
+
+            {% if item.question.explanation %}
+
+                <div class="explanation">
+
+                    💡
+                    {{ item.question.explanation }}
+
+                </div>
+
+            {% endif %}
+
+        </article>
+
+        {% endfor %}
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <span>
+        🇮🇳 India 2.0
+    </span>
+
+    <span>
+        Built with Django
+    </span>
+
+</footer>
+
+<script>
+
+    const scoreCircle =
+        document.querySelector(".score-circle");
+
+    const percentage =
+        scoreCircle.dataset.percentage;
+
+    scoreCircle.style.background =
+        `conic-gradient(
+            #138808 ${percentage}%,
+            #eeeeee ${percentage}%
+        )`;
+
+</script>
+</body>
+
+</html>
