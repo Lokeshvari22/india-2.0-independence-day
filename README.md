@@ -422,6 +422,3 @@ This project is created for **educational and portfolio purposes**.
 > **Freedom is not just history. It is our responsibility.**
 
 **India 2.0 — Remember the Past. Build the Future.**
-
-```
-```
