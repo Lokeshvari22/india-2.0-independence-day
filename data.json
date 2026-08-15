@@ -1,0 +1,745 @@
+[
+  {
+    "model": "auth.user",
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$LrHWUHXqUChO9PwBPiUQny$1/1puxD4NyfbvTSlGcj+5HJUxqwIy5/r5IhhZRh37IU=",
+      "last_login": "2026-08-15T02:40:37.878Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-08-15T02:39:54.349Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "uja7ueof3xue3wqqxthszgflw67p6ozf",
+    "fields": {
+      "session_data": ".eJxVjMsOgjAQAP9lz6Zpt_QBR-9-Q7PbbgU1kFA4Gf_dkHDQ68xk3pBo38a0N1nTVGAAA5dfxpSfMh-iPGi-Lyov87ZOrI5Enbap21LkdT3bv8FIbYQBohXTYfS6au2qZ87C1FshG6tG0zvJNotjH2LQXZCCjIUJnRhGgxo-X-NlN-c:1wv5ul:4WQzSbed7UCV1lINIkmytciyV54LJTTc5MW6kP9y1t4",
+      "expire_date": "2026-08-29T04:22:35.236Z"
+    }
+  },
+  {
+    "model": "history.historicalevent",
+    "pk": 1,
+    "fields": {
+      "year": 1857,
+      "title": "First War of Independence",
+      "description": "The uprising of 1857 was one of the earliest major challenges to British rule in India. It became an important milestone in India's long struggle for independence.",
+      "location": "India",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/%22Attack_of_the_Mutineers_on_the_Redan_Battery_at_Lucknow%2C_July_30th%2C_1857%2C.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_conte",
+      "created_at": "2026-08-15T02:47:15.885Z"
+    }
+  },
+  {
+    "model": "history.historicalevent",
+    "pk": 2,
+    "fields": {
+      "year": 1919,
+      "title": "Jallianwala Bagh",
+      "description": "The Jallianwala Bagh massacre became a turning point in India's freedom movement and deeply influenced the struggle against British rule.",
+      "location": "Amritsar, Punjab",
+      "image_url": "http://upload.wikimedia.org/wikipedia/commons/b/b5/Jallianwala_Bagh%2C_Amritsar_01.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "created_at": "2026-08-15T02:52:23.851Z"
+    }
+  },
+  {
+    "model": "history.historicalevent",
+    "pk": 3,
+    "fields": {
+      "year": 1930,
+      "title": "Salt March",
+      "description": "Mahatma Gandhi led the Salt March to challenge the British salt monopoly. The march became a powerful symbol of civil disobedience.",
+      "location": "Sabarmati to Dandi",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Marche_sel.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "created_at": "2026-08-15T02:54:30.080Z"
+    }
+  },
+  {
+    "model": "history.historicalevent",
+    "pk": 4,
+    "fields": {
+      "year": 1942,
+      "title": "Quit India Movement",
+      "description": "The Quit India Movement called for an end to British rule in India. It became one of the major mass movements of the Indian independence struggle.",
+      "location": "Bombay",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Quit_India_Movement_1967_stamp.jpg?utm_source=or.wikipedia.org&utm_campaign=index&utm_content=original",
+      "created_at": "2026-08-15T02:57:01.265Z"
+    }
+  },
+  {
+    "model": "history.historicalevent",
+    "pk": 5,
+    "fields": {
+      "year": 1946,
+      "title": "Royal Indian Navy Mutiny",
+      "description": "The Royal Indian Navy uprising became an important event during the final phase of the Indian independence movement.",
+      "location": "Bombay",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Mutiny_Ajitgarh.jpg/960px-Mutiny_Ajitgarh.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "created_at": "2026-08-15T02:59:34.946Z"
+    }
+  },
+  {
+    "model": "history.historicalevent",
+    "pk": 6,
+    "fields": {
+      "year": 1947,
+      "title": "Indian Independence",
+      "description": "On 15 August 1947, India became an independent nation, marking the end of British colonial rule and the beginning of a new chapter in India's history.",
+      "location": "New Delhi",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/A_news_bureau_photo_of_Nehru_and_the_new_flag.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "created_at": "2026-08-15T03:03:33.086Z"
+    }
+  },
+  {
+    "model": "fighters.freedomfighter",
+    "pk": 1,
+    "fields": {
+      "name": "Mahatma Gandhi",
+      "birth_year": 1869,
+      "death_year": 1948,
+      "short_description": "Leader of India's non-violent freedom movement.",
+      "biography": "Mahatma Gandhi was one of the most influential leaders of India's independence movement. He promoted non-violent resistance and civil disobedience as powerful methods of political action.",
+      "contribution": "Gandhi played a major role in movements including the Non-Cooperation Movement, Civil Disobedience Movement and Quit India Movement. His leadership helped transform the freedom struggle into a mass movement.",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Mahatma-Gandhi%2C_studio%2C_1931.jpg/960px-Mahatma-Gandhi%2C_studio%2C_1931.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content",
+      "created_at": "2026-08-15T03:41:58.762Z"
+    }
+  },
+  {
+    "model": "fighters.freedomfighter",
+    "pk": 2,
+    "fields": {
+      "name": "Bhagat Singh",
+      "birth_year": 1907,
+      "death_year": 1931,
+      "short_description": "Revolutionary who became an enduring symbol of India's freedom struggle.",
+      "biography": "Bhagat Singh was a revolutionary who became one of the most remembered figures of India's independence movement. He was known for his courage, political writings and commitment to ending colonial rule.",
+      "contribution": "Bhagat Singh inspired many young Indians through his revolutionary activities, writings and willingness to sacrifice his life for the freedom movement.",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Bhagat_Singh_1929.jpg/960px-Bhagat_Singh_1929.jpg?utm_source=simple.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "created_at": "2026-08-15T03:43:43.510Z"
+    }
+  },
+  {
+    "model": "fighters.freedomfighter",
+    "pk": 3,
+    "fields": {
+      "name": "Subhas Chandra Bose",
+      "birth_year": 1897,
+      "death_year": 1945,
+      "short_description": "Nationalist leader associated with the Indian National Army.",
+      "biography": "Subhas Chandra Bose was a prominent nationalist leader who sought to achieve India's independence through a different path from the mainstream Congress leadership.",
+      "contribution": "He led the Indian National Army and sought international support for India's struggle against British rule. His famous leadership and determination made him an important figure in the independence movement.",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Subhas_Chandra_Bose_NRB.jpg/960px-Subhas_Chandra_Bose_NRB.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "created_at": "2026-08-15T03:45:25.592Z"
+    }
+  },
+  {
+    "model": "fighters.freedomfighter",
+    "pk": 4,
+    "fields": {
+      "name": "Rani Lakshmibai",
+      "birth_year": 1828,
+      "death_year": 1858,
+      "short_description": "Queen of Jhansi and a prominent figure of the 1857 uprising.",
+      "biography": "Rani Lakshmibai of Jhansi became one of the most recognised leaders associated with the uprising of 1857. She became known for her courage and resistance against British forces.",
+      "contribution": "She played a significant role in the events of 1857 and became a lasting symbol of courage and resistance in Indian history.",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Rani_of_jhansi.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+      "created_at": "2026-08-15T03:47:08.226Z"
+    }
+  },
+  {
+    "model": "fighters.freedomfighter",
+    "pk": 5,
+    "fields": {
+      "name": "Sardar Vallabhbhai Patel",
+      "birth_year": 1875,
+      "death_year": 1950,
+      "short_description": "Nationalist leader and prominent organiser of India's freedom movement.",
+      "biography": "Sardar Vallabhbhai Patel was a major leader of the Indian National Congress and an important figure in India's struggle for independence.",
+      "contribution": "Patel participated in major movements against British rule and became one of the important leaders of India's independence movement. After independence, he also played a major role in integrating the princely states.",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Sardar_patel_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+      "created_at": "2026-08-15T03:48:45.665Z"
+    }
+  },
+  {
+    "model": "fighters.freedomfighter",
+    "pk": 6,
+    "fields": {
+      "name": "Sarojini Naidu",
+      "birth_year": 1879,
+      "death_year": 1949,
+      "short_description": "Poet, political leader and prominent participant in India's freedom movement.",
+      "biography": "Sarojini Naidu was a poet and political leader who actively participated in India's national movement. She became an important voice for India's independence.",
+      "contribution": "She participated in civil disobedience and other nationalist activities and became the first Indian woman to serve as president of the Indian National Congress.",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Sarojini_Naidu_in_1928.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+      "created_at": "2026-08-15T03:50:20.074Z"
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 1,
+    "fields": {
+      "question": "When did India gain independence?",
+      "option_a": "15 August 1945",
+      "option_b": "26 January 1950",
+      "option_c": "15 August 1947",
+      "option_d": "26 November 1949",
+      "correct_answer": "C",
+      "explanation": "India became independent from British rule on 15 August 1947."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 2,
+    "fields": {
+      "question": "Who is popularly known as the Father of the Nation in India?",
+      "option_a": "Sardar Patel",
+      "option_b": "Subhas Chandra Bose",
+      "option_c": "Jawaharlal Nehru",
+      "option_d": "Mahatma Gandhi",
+      "correct_answer": "D",
+      "explanation": "Mahatma Gandhi is popularly known as the Father of the Nation in India."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 3,
+    "fields": {
+      "question": "Who led the Indian National Army?",
+      "option_a": "Bhagat Singh",
+      "option_b": "Bal Gangadhar Tilak",
+      "option_c": "Subhas Chandra Bose",
+      "option_d": "Dadabhai Naoroji",
+      "correct_answer": "C",
+      "explanation": "Subhas Chandra Bose led the Indian National Army."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 4,
+    "fields": {
+      "question": "The Quit India Movement began in which year?",
+      "option_a": "1930",
+      "option_b": "1942",
+      "option_c": "1945",
+      "option_d": "1920",
+      "correct_answer": "B",
+      "explanation": "The Quit India Movement was launched in 1942."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 5,
+    "fields": {
+      "question": "Who is associated with the Salt March?",
+      "option_a": "Mahatma Gandhi",
+      "option_b": "Bhagat Singh",
+      "option_c": "Rani Lakshmibai",
+      "option_d": "Sardar Patel",
+      "correct_answer": "A",
+      "explanation": "Mahatma Gandhi led the Salt March in 1930 as part of the Civil Disobedience Movement."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 6,
+    "fields": {
+      "question": "Who was the queen of Jhansi?",
+      "option_a": "Sarojini Naidu",
+      "option_b": "Rani Lakshmibai",
+      "option_c": "Annie Besant",
+      "option_d": "Vijaya Lakshmi Pandit",
+      "correct_answer": "B",
+      "explanation": "Rani Lakshmibai was the queen of Jhansi and a prominent figure during the uprising of 1857."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 7,
+    "fields": {
+      "question": "Who wrote \"Vande Mataram\"?",
+      "option_a": "Rabindranath Tagore",
+      "option_b": "Bankim Chandra Chattopadhyay",
+      "option_c": "Subramania Bharati",
+      "option_d": "Sarojini Naidu",
+      "correct_answer": "B",
+      "explanation": "Bankim Chandra Chattopadhyay wrote Vande Mataram."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 8,
+    "fields": {
+      "question": "Who was known as the \"Nightingale of India\"?",
+      "option_a": "Sarojini Naidu",
+      "option_b": "Rani Lakshmibai",
+      "option_c": "Aruna Asaf Ali",
+      "option_d": "Kasturba Gandhi",
+      "correct_answer": "A",
+      "explanation": "Sarojini Naidu was popularly known as the Nightingale of India because of her poetry."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 9,
+    "fields": {
+      "question": "The First War of Independence took place in which year?",
+      "option_a": "1857",
+      "option_b": "1885",
+      "option_c": "1905",
+      "option_d": "1919",
+      "correct_answer": "A",
+      "explanation": "The major uprising against British rule began in 1857."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 10,
+    "fields": {
+      "question": "When did India become a republic?",
+      "option_a": "15 August 1947",
+      "option_b": "26 November 1949",
+      "option_c": "26 January 1950",
+      "option_d": "2 October 1950",
+      "correct_answer": "C",
+      "explanation": "India became a republic on 26 January 1950."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2026-08-15T02:47:15.895Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "history",
+        "historicalevent"
+      ],
+      "object_id": "1",
+      "object_repr": "1857 - First War of Independence",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2026-08-15T02:47:31.073Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "history",
+        "historicalevent"
+      ],
+      "object_id": "1",
+      "object_repr": "1857 - First War of Independence",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2026-08-15T02:52:23.854Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "history",
+        "historicalevent"
+      ],
+      "object_id": "2",
+      "object_repr": "1919 - Jallianwala Bagh",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2026-08-15T02:54:30.082Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "history",
+        "historicalevent"
+      ],
+      "object_id": "3",
+      "object_repr": "1930 - Salt March",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2026-08-15T02:57:01.269Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "history",
+        "historicalevent"
+      ],
+      "object_id": "4",
+      "object_repr": "1942 - Quit India Movement",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2026-08-15T02:59:34.949Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "history",
+        "historicalevent"
+      ],
+      "object_id": "5",
+      "object_repr": "1946 - Royal Indian Navy Mutiny",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2026-08-15T03:03:33.089Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "history",
+        "historicalevent"
+      ],
+      "object_id": "6",
+      "object_repr": "1947 - Indian Independence",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2026-08-15T03:38:16.415Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "history",
+        "historicalevent"
+      ],
+      "object_id": "5",
+      "object_repr": "1946 - Royal Indian Navy Mutiny",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2026-08-15T03:41:58.764Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "fighters",
+        "freedomfighter"
+      ],
+      "object_id": "1",
+      "object_repr": "Mahatma Gandhi",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2026-08-15T03:43:43.512Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "fighters",
+        "freedomfighter"
+      ],
+      "object_id": "2",
+      "object_repr": "Bhagat Singh",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2026-08-15T03:45:25.597Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "fighters",
+        "freedomfighter"
+      ],
+      "object_id": "3",
+      "object_repr": "Subhas Chandra Bose",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2026-08-15T03:47:08.232Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "fighters",
+        "freedomfighter"
+      ],
+      "object_id": "4",
+      "object_repr": "Rani Lakshmibai",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2026-08-15T03:48:45.668Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "fighters",
+        "freedomfighter"
+      ],
+      "object_id": "5",
+      "object_repr": "Sardar Vallabhbhai Patel",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2026-08-15T03:50:20.076Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "fighters",
+        "freedomfighter"
+      ],
+      "object_id": "6",
+      "object_repr": "Sarojini Naidu",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2026-08-15T04:11:53.308Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "quiz",
+        "question"
+      ],
+      "object_id": "1",
+      "object_repr": "When did India gain independence?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2026-08-15T04:13:22.669Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "quiz",
+        "question"
+      ],
+      "object_id": "2",
+      "object_repr": "Who is popularly known as the Father of the Nation in India?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2026-08-15T04:14:21.655Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "quiz",
+        "question"
+      ],
+      "object_id": "3",
+      "object_repr": "Who led the Indian National Army?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2026-08-15T04:15:14.657Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "quiz",
+        "question"
+      ],
+      "object_id": "4",
+      "object_repr": "The Quit India Movement began in which year?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2026-08-15T04:16:03.985Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "quiz",
+        "question"
+      ],
+      "object_id": "5",
+      "object_repr": "Who is associated with the Salt March?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2026-08-15T04:16:57.012Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "quiz",
+        "question"
+      ],
+      "object_id": "6",
+      "object_repr": "Who was the queen of Jhansi?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2026-08-15T04:17:51.238Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "quiz",
+        "question"
+      ],
+      "object_id": "7",
+      "object_repr": "Who wrote \"Vande Mataram\"?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2026-08-15T04:18:50.429Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "quiz",
+        "question"
+      ],
+      "object_id": "8",
+      "object_repr": "Who was known as the \"Nightingale of India\"?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2026-08-15T04:19:54.495Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "quiz",
+        "question"
+      ],
+      "object_id": "9",
+      "object_repr": "The First War of Independence took place in which year?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2026-08-15T04:21:06.421Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "quiz",
+        "question"
+      ],
+      "object_id": "10",
+      "object_repr": "When did India become a republic?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  }
+]
